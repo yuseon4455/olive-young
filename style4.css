@@ -1,0 +1,151 @@
+/* style.css */
+:root {
+  --main-color: #348e4c;
+  --text-color: #333;
+  --heading1: 50px;
+  --heading2: 40px;
+  --baseFontSize: 18px;
+}
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-size: var(--baseFontSize);
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--text-color);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: var(--heading1);
+}
+
+h2 {
+  font-size: var(--heading2);
+}
+
+#main-header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: relative;
+  height: 60px;
+}
+
+#main-header > h1 {
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  font-size: 0;
+}
+
+#main-header > nav {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-weight: 700;
+}
+
+#main-header > nav > ul > li {
+  display: inline-block;
+  margin-left: 5em;
+}
+
+#main-header > nav a:hover {
+  color: var(--main-color);
+} 
+
+.main {
+  width: 100%;
+  height: calc(100% - 60px);
+  background: #ccc;
+}
+
+.main .col {
+  width: calc(100% / 4);
+  height: 100%;
+  background: #abc;
+  position: relative;
+}
+
+.main .col h2 {
+  background: rgba(0,0,0,0.70);
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /* 중앙수직위치 = 50% - 요소높이 1/2 */
+  top: calc(50% - 109px / 2);
+}
+
+.main .col h2 span {
+  display: block;
+  font-size: small;
+  font-weight: normal;
+}
+
+.btn-link {
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  width: 124px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 120px;
+  left: calc(50% - 124px / 2);
+}
+
+.btn-link:hover, .btn-link:active {
+  background: rgba(255,255,255,0.75);
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
+/* 첫번째 칼럼 배경 스타일 지정 */
+.main .col:first-child {
+  background-image: url('../백유선/images/skin.jpg');
+  background-size: cover;
+  
+}
+.main #section2 {
+  background-image: url('../백유선/images/lips.jpg');
+  background-size: cover;
+}
+.main #section3 {
+    background-image: url('../백유선/images/foundation.jpg');
+    background-size: cover;
+  }
+  .main #section4 {
+    background-image: url('../백유선/images/perfume.jpg');
+    background-size: cover;
+  }
+#section1, #section2, #section3, #section4 {
+    float: left;
+  }
+  #logo{
+      width: 15%;
+  }
